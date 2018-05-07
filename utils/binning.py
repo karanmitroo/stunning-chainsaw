@@ -24,13 +24,12 @@ def binning(k, categorical):
                 mapping[i][each_tuple[i]] = random.randint(1,k)
                 each_tuple[i] = mapping[i][each_tuple[i]]
 
-
-    for each_dict in mapping:
+    # for each_dict in mapping:
     
-        for i in range(1,k+1):
-            try:
-                print i, (each_dict.values()).count(i)
-            except:
-                pass
+    #     for i in range(1,k+1):
+    #         try:
+    #             print i, (each_dict.values()).count(i)
+    #         except:
+    #             pass
 
     return categorical
