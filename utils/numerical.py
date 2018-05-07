@@ -15,7 +15,6 @@ def numerical_dist(x, y):
 # data = numpy.loadtxt("datasets/contraceptive_method_choice.csv", delimiter=",")
 data = numpy.loadtxt("datasets/iris.csv", delimiter=",", usecols = (0,1,2,3))
 
-print data
 # Specify the number of columns containging numerical data in 0 index format
 numerical = data[:, 0:4]
 mean = []
