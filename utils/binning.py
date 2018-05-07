@@ -1,4 +1,3 @@
-import numpy
 import random
 
 
@@ -14,7 +13,7 @@ def binning(k, categorical):
         mapping.append({})
 
     """
-    Mapping all the values randomly to new values. 
+    Mapping all the values randomly to new values in range 1 - k both inclusive. 
     Also checking if already mapped then considering the same value.
     """
     for each_tuple in categorical:
@@ -26,12 +25,12 @@ def binning(k, categorical):
                 each_tuple[i] = mapping[i][each_tuple[i]]
 
 
+    for each_dict in mapping:
+    
+        for i in range(1,k+1):
+            try:
+                print i, (each_dict.values()).count(i)
+            except:
+                pass
+
     return categorical
-    
-# for each_dict in mapping:
-    
-#     for i in range(1,k+1):
-#         try:
-#             print i, (each_dict.values()).count(i)
-#         except:
-#             pass

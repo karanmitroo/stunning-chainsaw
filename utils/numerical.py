@@ -32,5 +32,3 @@ for i in range(0, len(numerical)):
     for j in range(len(numerical[i])):
         z_scores[i].append(z_score_norm(numerical[i][j], mean[j], std_dev[j]))
 
-print mean
-print numerical_dist(1, 43)
