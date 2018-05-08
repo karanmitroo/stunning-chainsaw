@@ -1,6 +1,7 @@
 from utils.numerical import numerical_dist
 from utils.binning import binning
 from utils.kmeans import k_means
+from utils.min_max_normalize import min_max_normalize
 from clean_test import clean_file, clean_data
 import numpy as np
 
@@ -12,11 +13,11 @@ import numpy as np
 # categorical = binning(k, categorical)
 
 #TEACHING ASSISTANT EVALUATION dataset
-# data = np.loadtxt("datasets/tae.csv", delimiter=",", dtype=str)
-# categorical = data[:, (1,2)]
-# numerical = data[:, (0,3,4,5)].astype(np.float)
-# k = 3
-# categorical = binning(k, categorical)
+data = np.loadtxt("datasets/tae.csv", delimiter=",", dtype=str)
+categorical = data[:, (1,2)]
+numerical = data[:, (0,3,4,5)].astype(np.float)
+k = 3
+categorical = binning(k, categorical)
 
 #CREDIT APPROVAL dataset
 # clean_file("datasets/crx.csv")
@@ -46,11 +47,14 @@ No need of binning in this dataset as categorical data already
 converted to numerical format. Also range of data values < k, so 
 binning not to be done.
 """
-data = np.loadtxt("datasets/biodeg.csv", delimiter=";", dtype=str)
-categorical = data[:, (1,2,4,5,6,7,8,9)]
-numerical = data[:, (0,3)].astype(np.float)
-k = 3
+# data = np.loadtxt("datasets/cmc.csv", delimiter=",", dtype=str)
+# categorical = data[:, (1,2,4,5,6,7,8,9)]
+# numerical = data[:, (0,3)].astype(np.float)
+# k = 3
 
+
+#Normalizing numerical data using min_max_normalizaion
+numerical = min_max_normalize(k, numerical)
 
 #Making a combined array of categorical and numerical
 total = np.concatenate([categorical, numerical], axis = 1)
