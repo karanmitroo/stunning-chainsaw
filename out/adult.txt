@@ -1,0 +1,3 @@
+Only Categorical result: {0: 17037, 1: 15524}
+Only numerical result: {0: 24235, 1: 8326}
+Mixed Result: {0: 24230, 1: 8331}

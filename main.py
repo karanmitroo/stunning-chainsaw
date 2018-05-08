@@ -1,6 +1,7 @@
 from utils.numerical import numerical_dist
 from utils.binning import binning
 from utils.kmeans import k_means
+from clean_test import clean_file, clean_data
 import numpy as np
 
 #IRIS dataset
@@ -18,7 +19,8 @@ import numpy as np
 # categorical = binning(k, categorical)
 
 #CREDIT APPROVAL dataset
-# data = np.loadtxt("datasets/crx.csv", delimiter=",", dtype=str)
+# clean_file("datasets/crx.csv")
+# data = np.loadtxt("datasets/crx_cleaned.csv", delimiter=",", dtype=str)
 # categorical = data[:, (0,3,4,5,6,8,9,11,12)]
 # numerical = data[:, (1,2,7,10,13,14)].astype(np.float)
 # k = 2
@@ -31,7 +33,7 @@ import numpy as np
 # k = 2
 # categorical = binning(k, categorical)
 
-#QSAR BIODEGRADABLE dataset
+#QSAR BIODEGRADABLE dataset (Numerical data has a good impact over categorical)
 # data = np.loadtxt("datasets/biodeg.csv", delimiter=";", dtype=str)
 # categorical = data[:, (23,24,25,27,28,32,36,41)]
 # numerical = data[:, (0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,26,29,30,31,33,34,35,37,38,39,40)].astype(np.float)
