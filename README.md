@@ -19,4 +19,4 @@
 9. Results will be printed on the terminal itself.
 
 
-## Ps: For those using windows simply install the dependencies from the requirements file and run the main.py file. 
+#### Ps: For those using windows simply install the dependencies from the requirements file and run the main.py file. 
